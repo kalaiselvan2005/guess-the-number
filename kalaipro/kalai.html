@@ -1,0 +1,36 @@
+
+<link rel="stylesheet" href="styles.css">
+<script> src="script.js"</script>
+<body>
+  
+  <h1 >Guess the number(0-10) </h1>
+<input id="num" >
+<button onclick="k1()">check</button>
+<h2 id="result">result</h2>
+<h3 id="score">score:10</h3>
+<script>
+    var num=document.getElementById("num")
+    var result=document.getElementById("result")
+    var score=document.getElementById("score")
+    var random=Math.floor(Math.random()*10)+1
+    var tot=10
+    function k1()
+    {
+        var guess=num.value
+        if(random==guess)
+    {
+        console.log("right")
+        result.textContent="right"
+        alert("you won the game...")
+    }
+    else
+    {
+        tot=tot-1
+        result.textContent="wrong"
+        score.textContent="score"+tot
+    }
+    }
+</script>
+
+<a href="">game</a>
+</body>
